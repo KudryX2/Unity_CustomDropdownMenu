@@ -25,13 +25,13 @@ public class CustomDropDown : MonoBehaviour
         addMouseListener(gameObject);
 
         optionTemplateButton = transform.GetChild(1).GetComponent<Button>();    // Option template (Second child)
-    //    optionTemplateButton.transform.position = new Vector3(0, 0, 0);
         optionTemplateButton.gameObject.SetActive(false);
 
 
         optionsContainer = new GameObject("OptionsContainer");
         optionsContainer.transform.parent = transform;
-        optionsContainer.transform.localPosition = new Vector3(0, (float) - (optionHeight * 0.5f) ,0);
+        // optionsContainer.transform.localPosition = new Vector3(0, (float) - (optionHeight * 0.5f) ,0);   // If using anchors
+        optionsContainer.transform.localPosition = new Vector3(0, 0, 0);    
 
         overDropdown = false;
     }
