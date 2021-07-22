@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System;
 
 
 public class CustomDropDown : MonoBehaviour
@@ -30,7 +31,7 @@ public class CustomDropDown : MonoBehaviour
 
         optionsContainer = new GameObject("OptionsContainer");
         optionsContainer.transform.parent = transform;
-        // optionsContainer.transform.localPosition = new Vector3(0, (float) - (optionHeight * 0.5f) ,0);   // If using anchors
+   //     optionsContainer.transform.localPosition = new Vector3(Math.Abs(optionTemplateButton.GetComponent<RectTransform>().rect.x), (float) - (optionHeight * 0.5f) ,0);   // If using anchors
         optionsContainer.transform.localPosition = new Vector3(0, 0, 0);    
 
         overDropdown = false;
